@@ -20,10 +20,10 @@ Math.mcm = function(...e){
     var fi = 0;
     for(list in res){
       if(res[list].includes(p)){
-        fi += 1;
+        var fi = fi + 1;
       }
     }
-    if(fi == res.lenght){
+    if(fi == res.length){
       return p;
     }
   }
