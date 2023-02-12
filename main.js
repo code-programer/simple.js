@@ -23,5 +23,8 @@ Math.mcm = function(...e){
         fi += 1;
       }
     }
+    if(fi == res.lenght){
+      return p;
+    }
   }
 }
