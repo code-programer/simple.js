@@ -8,9 +8,18 @@
     <p id="result"></p>
   </body>
   <script>
+    sessionStorage.e = "Here are the errors, from simple.js";
     function dorun(){
       var val = document.getElementById("code").value;
-      document.getElementById("result").innerHTML = eval(val);
+      try{
+        document.getElementById("result").innerHTML = eval(val);
+      }
+      catch(e){
+        
+        var err = sessionStorage.e.split(",");
+        err.push(e.name + " : " + e.message)
+        sessionStorage.e = err.toString;
+      }
     }
     function run(e){
       if(e.keyCode = 13){
