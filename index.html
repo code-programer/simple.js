@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>simple.js debugger</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <input type="text" placeholder="Code here..." id="code">
+    <p id="result"></p>
+  </body>
+  <script>
+    function dorun(){
+      var val = document.getElementById("code").value;
+      document.getElementById("result").innerHTML = eval(val);
+    }
+    function run(e){
+      if(e.keyCode = 13){
+        dorun()
+      }
+    }
+    document.getElementById("code").addEventListener("keyup",run)
+  </script>
+</html>
