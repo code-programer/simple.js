@@ -18,7 +18,7 @@ Math.mcm = function(a, b){
     return eval(a * b) / Math.mcd(a, b)
   }
 }
-function import(url){
+function JSimport(url){
   const url1 = url;
   const response = await fetch(url1);
   const data = await response.text();
